@@ -30,7 +30,9 @@ Some important points to note:
 
 One of the syntax for jsim: 
 
->```M[name] d g s b [type] w l```  
+```
+M[name] d g s b [type] w l
+```  
 
 M is mosfet, `[name]` is equivalent to variable name, d g s b is respectively
 drain, gate, source, and bulk, `[type]` is either PFET or NFET, and w and l are
@@ -52,13 +54,17 @@ The last part of lab 1 which is to esign a logic gate given a truth table
 | 1 | 1 | 1 | 1 |
 
 From the truth table above, the sum of product will be:  
-```F = A.B.C + A.~B.C + ~A.B.C```  
+```
+F = A.B.C + A.~B.C + ~A.B.C
+```  
 Simplified,  
-```F = A.C + ~A.B.C```  
-```F = C.(A+B)```
+```
+F = A.C + ~A.B.C  
+F = C.(A+B)
+```
 
 The circuit drawn from the sum of product is:  
-![circuit](\cmos.jpg)
+![circuit](cmos.jpg)
 
 ### **Lab 2**
 In this lab we made the full adder 4 bit. We created it with ripple carry
@@ -68,9 +74,13 @@ architecture, which is cascading the full adders.
 
 Each of the full adder consisted of 2 XOR gate and 1 3-input NAND gate and 3 2-input NAND gate.
 
-The formula for the full adder:  
-```S = A ⊕ B ⊕ C```  
-```Cout = A.B + A.C + B.C```
+The formula for the full adder: (^ is XOR)  
+```
+S = A ^ B ^ C
+Cout = A.B + A.C + B.C
+```
+
+
 
 The testing of this full adder is with 3 clock with different period. The goal
 is to achieve all combinations of inputs, so we used 3 clock of period 10ns,
@@ -98,7 +108,8 @@ V is to detect overflow, which is when the sign of the result is opposite of the
 Second, compare.
 Compare uses Z, V, and N from the adder. By doing A-B, the result of Z, V, and N can be used to compare A to B.  
 For A == B, ```F = Z``` as Z indicates all bits are 0.  
-For A < B, ```F = N ⊕ V``` as A - B will result in negative if A is less than B, but negative could mean overflow too so we have to make sure it's not by "XOR-ing" N and V.  
-For A <= B, ```F = Z + (N ⊕ V)``` which is the OR of less than and equal.
+For A < B, ```F = N ^ V``` as A - B will result in negative if A is less than B, but negative could mean overflow too so we have to make sure it's not by "XOR-ing" N and V.  
+For A <= B, ```F = Z + (N ^ V)``` which is the OR of less than and equal.
 
-Third,
+Third, boolean.  
+Boolean uses a multiplexer
