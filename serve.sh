@@ -1,0 +1,1 @@
+"D:\Amanda Kosim\Github\SkyDocs.Windows\SkyDocs-v0.7.4.exe" serve
