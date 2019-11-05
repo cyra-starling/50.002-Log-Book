@@ -3,20 +3,20 @@ title: "30 Oct"
 language: "en"
 previous: "index.html"
 ---
-
-# 30 Oct 2019 - The day I realized I need to make a log book
+## 30 Oct 2019 - 2 Nov 2019
+# The day I realized I need to make a log book
 > A Good Friend of Mine:  
 _"Do you know we have a log book that we need to write and will be checked 
 during the first check off?"_
 
+Me:  
 ![what](https://media3.giphy.com/media/91fEJqgdsnu4E/giphy.gif)
 
 Ok yes I just remembered that recently so here is my first entry.
 
 ---
 
-Here I'll be revising my labs and putting in some game ideas that I have 
-thought of.
+Here I'll be revising my labs and Mini Hardware Project.
 
 ### **Lab 1**
 This lab mostly focused on trying to get familiarized with jsim syntax and the 
@@ -117,3 +117,46 @@ Boolean uses a multiplexer where ALUFN signals as the input and A and B as the s
 
 For example, for the boolean AND, the alufn from 0 to 3 would be 0 0 0 1.  
 When A is 1 and B is 1, it will choose the last option which is 1, and for other combinations where there will be at least 1 '0', the multiplexer will choose 0. This shows the multiplexer works as the logic gate AND.
+
+Other combinations: (ALUFN is written from bit 0 to 3)  
+OR: 0111
+XOR: 0110
+“A”: 0101
+
+Last, shifter.
+Shifter has 3 type, shift left, shift right, and shift right arithmetic.  
+Simple explanation for shift left and shift right: (also called shift left/right logical)  
+![shift right logical](https://chortle.ccsu.edu/AssemblyTutorial/Chapter-12/lshiftRight.gif)  
+![shift left logical](https://chortle.ccsu.edu/AssemblyTutorial/Chapter-12/lshiftLeft.gif)
+
+For shift right arithmetic, the difference is that the signed bit (the most significant bit) is "kept". So instead of inserting 0 at the most significant bit like shift right logical, it "keeps" the original bit. If the original bit is 0 then insert 0, if 1 then insert 1. Illustrated below.  
+![shift right arithmetic](https://chortle.ccsu.edu/assemblytutorial/Chapter-14/arithRight.gif)
+
+The shifter is created by cascading 5 "shifter units" are what i call them. 1 Shifter unit shifts the input by different amount. For 32 bit shifter. there will be 5 shifter units for 1 bit, 2 bit, 4 bit, 8 bit, and 16 bit.
+
+An additional part is multiply.
+It uses this logic illustrated below.  
+![multiply](https://www.electronicshub.org/wp-content/uploads/2015/06/Binary-Multiplication.jpg)
+
+By using full adder and logic gate AND for the multiply, cascading them together in this architecture taken from the handout,  
+![multiply arcitecture](multiply.png)  
+One can make the multiply part for ALU.  
+Because the writing on the jsim netlist was very tedious, I created a simple python script to part of the netlist for me.
+
+---
+---
+
+## Mini Hardware Project
+During the first lab, me and my group managed to make the half adder and we had extra time, so we decided to make the full adder too and test it on the breadboard.
+
+So we have divided our work, my first part was to create the circuit diagram. Below is the circuit diagram that I had created.  
+![diagram](circuit.jpg)
+
+Together we soldered this into the circuit board, and creaded a FSM (Finite State Machine) in MOJO to automate the testing of our full adder.  
+![circuit with mojo](circuitMojo.jpg)  
+The FSM consisted of all the possible inputs to the full adder.  
+![fsm states](FSMSTATE.png)  
+The starting state was Idle, and when the user press the button on the MOJO at the right timing of the CLK inside MOJO, it will move to state S000 where the input is 000 for A,B,Cin. If it passes. it will move to the next state(S001,S010, etc) and if at any state it fails, it will immediately jump to Fail state and light up the specific LED that indicates failure.
+
+We also enabled manual testing using the mojo, setting the input manually using the switches and showing the output to the LED on MOJO. A more detailed explanation on the testing can be watched here.  
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Yux4Vubd5nw/0.jpg)](https://www.youtube.com/watch?v=Yux4Vubd5nw&feature=youtu.be)

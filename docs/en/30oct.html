@@ -11,17 +11,17 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="30 Oct - 50.002 Log Book"/>
 <meta property="og:site_name" content="50.002 Log Book"/>
-<meta property="og:url" content="https://cyra-starling.github.io/50.002-Log-Book//en/30oct.html"/>
+<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/30oct.html"/>
 <meta property="og:description" content="Documentation built with SkyDocs."/>
-<meta property="og:image" content="https://cyra-starling.github.io/50.002-Log-Book//assets/img/icon.png"/>
+<meta property="og:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30 Oct - 50.002 Log Book"/>
 <meta name="twitter:site" content="50.002 Log Book"/>
 <meta name="twitter:creator" content="@Skyost_"/>
-<meta name="twitter:url" content="https://cyra-starling.github.io/50.002-Log-Book//en/30oct.html"/>
+<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/30oct.html"/>
 <meta name="twitter:description" content="Documentation built with SkyDocs."/>
-<meta name="twitter:image" content="https://cyra-starling.github.io/50.002-Log-Book//assets/img/icon.png"/>
+<meta name="twitter:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
 <meta name="theme-color" content="#2980b9"/>
 <link rel="icon" type="image/png" href="../assets/img/icon.png"/>
@@ -52,12 +52,15 @@
 <a href="#">Log Book Entries</a>
 <ul>
 <li>
-<a href="30oct.html">30 Oct</a>
+<a href="30oct.html">Start of Log Book</a>
 </li>
 <li>
-<a href="4nov.html">4 Nov</a>
+<a href="4nov.html">MOJO ALU</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="gameIdeas.html">Game Ideas</a>
 </li>
 </ul>
 </nav>
@@ -73,20 +76,21 @@ Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
 <li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
 <li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
 </ul>
-<small class="date text-muted">Nov 6, 2019, 12:39:24 AM</small>
+<small class="date text-muted">Nov 6, 2019, 2:15:57 AM</small>
 </section>
 <section>
-<h1 id="30-oct-2019---the-day-i-realized-i-need-to-make-a-log-book">30 Oct 2019 - The day I realized I need to make a log book</h1>
+<h2 id="30-oct-2019---2-nov-2019">30 Oct 2019 - 2 Nov 2019</h2>
+<h1 id="the-day-i-realized-i-need-to-make-a-log-book">The day I realized I need to make a log book</h1>
 <blockquote>
 <p>A Good Friend of Mine:<br/>
 <em>&quot;Do you know we have a log book that we need to write and will be checked
 during the first check off?&quot;</em></p>
 </blockquote>
-<p><img src="https://media3.giphy.com/media/91fEJqgdsnu4E/giphy.gif" alt="what"/></p>
+<p>Me:<br/>
+<img src="https://media3.giphy.com/media/91fEJqgdsnu4E/giphy.gif" alt="what"/></p>
 <p>Ok yes I just remembered that recently so here is my first entry.</p>
 <hr/>
-<p>Here I'll be revising my labs and putting in some game ideas that I have
-thought of.</p>
+<p>Here I'll be revising my labs and Mini Hardware Project.</p>
 <h3 id="lab-1"><strong>Lab 1</strong></h3>
 <p>This lab mostly focused on trying to get familiarized with jsim syntax and the
 CMOS.</p>
@@ -165,6 +169,38 @@ Boolean uses a multiplexer where ALUFN signals as the input and A and B as the s
 <img src="boolean.png" alt="boolean"/></p>
 <p>For example, for the boolean AND, the alufn from 0 to 3 would be 0 0 0 1.<br/>
 When A is 1 and B is 1, it will choose the last option which is 1, and for other combinations where there will be at least 1 '0', the multiplexer will choose 0. This shows the multiplexer works as the logic gate AND.</p>
+<p>Other combinations: (ALUFN is written from bit 0 to 3)<br/>
+OR: 0111
+XOR: 0110
+“A”: 0101</p>
+<p>Last, shifter.
+Shifter has 3 type, shift left, shift right, and shift right arithmetic.<br/>
+Simple explanation for shift left and shift right: (also called shift left/right logical)<br/>
+<img src="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-12/lshiftRight.gif" alt="shift right logical"/><br/>
+<img src="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-12/lshiftLeft.gif" alt="shift left logical"/></p>
+<p>For shift right arithmetic, the difference is that the signed bit (the most significant bit) is &quot;kept&quot;. So instead of inserting 0 at the most significant bit like shift right logical, it &quot;keeps&quot; the original bit. If the original bit is 0 then insert 0, if 1 then insert 1. Illustrated below.<br/>
+<img src="https://chortle.ccsu.edu/assemblytutorial/Chapter-14/arithRight.gif" alt="shift right arithmetic"/></p>
+<p>The shifter is created by cascading 5 &quot;shifter units&quot; are what i call them. 1 Shifter unit shifts the input by different amount. For 32 bit shifter. there will be 5 shifter units for 1 bit, 2 bit, 4 bit, 8 bit, and 16 bit.</p>
+<p>An additional part is multiply.
+It uses this logic illustrated below.<br/>
+<img src="https://www.electronicshub.org/wp-content/uploads/2015/06/Binary-Multiplication.jpg" alt="multiply"/></p>
+<p>By using full adder and logic gate AND for the multiply, cascading them together in this architecture taken from the handout,<br/>
+<img src="multiply.png" alt="multiply arcitecture"/><br/>
+One can make the multiply part for ALU.<br/>
+Because the writing on the jsim netlist was very tedious, I created a simple python script to part of the netlist for me.</p>
+<hr/>
+<hr/>
+<h2 id="mini-hardware-project">Mini Hardware Project</h2>
+<p>During the first lab, me and my group managed to make the half adder and we had extra time, so we decided to make the full adder too and test it on the breadboard.</p>
+<p>So we have divided our work, my first part was to create the circuit diagram. Below is the circuit diagram that I had created.<br/>
+<img src="circuit.jpg" alt="diagram"/></p>
+<p>Together we soldered this into the circuit board, and creaded a FSM (Finite State Machine) in MOJO to automate the testing of our full adder.<br/>
+<img src="circuitMojo.jpg" alt="circuit with mojo"/><br/>
+The FSM consisted of all the possible inputs to the full adder.<br/>
+<img src="FSMSTATE.png" alt="fsm states"/><br/>
+The starting state was Idle, and when the user press the button on the MOJO at the right timing of the CLK inside MOJO, it will move to state S000 where the input is 000 for A,B,Cin. If it passes. it will move to the next state(S001,S010, etc) and if at any state it fails, it will immediately jump to Fail state and light up the specific LED that indicates failure.</p>
+<p>We also enabled manual testing using the mojo, setting the input manually using the switches and showing the output to the LED on MOJO. A more detailed explanation on the testing can be watched here.<br/>
+<a href="https://www.youtube.com/watch?v=Yux4Vubd5nw&amp;feature=youtu.be"><img src="https://img.youtube.com/vi/Yux4Vubd5nw/0.jpg" alt="IMAGE ALT TEXT HERE"/></a></p>
 </section>
 <section id="pagination" class="clearfix">
 <a href="index.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>

@@ -11,17 +11,17 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="4 Nov - 50.002 Log Book"/>
 <meta property="og:site_name" content="50.002 Log Book"/>
-<meta property="og:url" content="https://cyra-starling.github.io/50.002-Log-Book//en/4nov.html"/>
+<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/4nov.html"/>
 <meta property="og:description" content="Documentation built with SkyDocs."/>
-<meta property="og:image" content="https://cyra-starling.github.io/50.002-Log-Book//assets/img/icon.png"/>
+<meta property="og:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="4 Nov - 50.002 Log Book"/>
 <meta name="twitter:site" content="50.002 Log Book"/>
 <meta name="twitter:creator" content="@Skyost_"/>
-<meta name="twitter:url" content="https://cyra-starling.github.io/50.002-Log-Book//en/4nov.html"/>
+<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/4nov.html"/>
 <meta name="twitter:description" content="Documentation built with SkyDocs."/>
-<meta name="twitter:image" content="https://cyra-starling.github.io/50.002-Log-Book//assets/img/icon.png"/>
+<meta name="twitter:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
 <meta name="theme-color" content="#2980b9"/>
 <link rel="icon" type="image/png" href="../assets/img/icon.png"/>
@@ -52,12 +52,15 @@
 <a href="#">Log Book Entries</a>
 <ul>
 <li>
-<a href="30oct.html">30 Oct</a>
+<a href="30oct.html">Start of Log Book</a>
 </li>
 <li>
-<a href="4nov.html">4 Nov</a>
+<a href="4nov.html">MOJO ALU</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="gameIdeas.html">Game Ideas</a>
 </li>
 </ul>
 </nav>
@@ -73,14 +76,32 @@ Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
 <li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
 <li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
 </ul>
-<small class="date text-muted">Nov 5, 2019, 10:30:13 PM</small>
+<small class="date text-muted">Nov 6, 2019, 2:16:09 AM</small>
 </section>
 <section>
-<h1 id="4-nov---the-day-we-combined-our-alu-in-mojo">4 Nov - The day we combined our ALU in MOJO</h1>
+<h2 id="4-nov-2019---6-nov-2019">4 Nov 2019 - 6 Nov 2019</h2>
+<h1 id="the-day-we-combined-our-alu-in-mojo">The day we combined our ALU in MOJO!</h1>
+<p><img src="https://2.bp.blogspot.com/-UPgdZ5dkFxo/WMgjRKb82LI/AAAAAAAAOTo/gQ0IyLSSDowvyJKB0lqVjxD-RCDFB62PwCEw/s500/simbrix-join.gif" alt="combine!" title="combine!"/></p>
+<p>We had divided the work a few days ago so that each of us will create 1 part of the ALU. I will be making the shifter, Matthew will make boolean, Zack will make adder, and Jia Yi will make compare.</p>
+<p>Each of us created a lucid file each to make each part a module (shifter module, adder module, etc) to make it modular so that we can reuse it if we need to in other code</p>
+<p>We met today to combine our parts and created an <code>alu.luc</code> file that uses all the other parts (created as a module).</p>
+<p>After we had combined them, we had to map out the pins and switches and leds to show outputs and take inputs. We had our share of trying to debug what was the problem when we connected the pins to the VCC for input '1' and GND for input '0'.</p>
+<p>Fun fact: We had a duckie to help us debug!<br/>
+<img src="duckie.jpg" alt="duckie" width="250"/></p>
+<p>We find some mistakes that we made when we created our parts and have fixed it, such as:</p>
+<ul>
+<li>Did not specify as sign bits in the shifter for shift arithmetic</li>
+<li>Forgot to XOR the <code>B</code> with <code>ALUFN</code> to do the 2's complement in the formula for V that will be used to compare</li>
+<li>Written down the wrong <code>ALUFN</code> signal</li>
+</ul>
+<p>We created another FSM to automatically test our alu, and we also created a way to manually test our alu. The FSM states diagram are illustrated below.</p>
+<p><img src="fsm-alu.jpg" alt="fsm state diagram"/></p>
+<p>During the debugging session, I had noticed that I made some careless mistakes that I should be able to avoid in the future if I paid more attention to the details when I code, especially when I copy paste some parts of the code that repeats the earlier part of my code and I forgot to change some values (like the <code>ALUFN</code>) and ended up with the wrong answer.</p>
+<p><a href="https://github.com/zackteo/16-bit-ALU-mojo">Here's a link to our github repo for this ALU for our source code</a></p>
 </section>
 <section id="pagination" class="clearfix">
 <a href="30oct.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
-<a href="/en/index.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+<a href="/en/gameIdeas.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
 </section>
 </article>
 </div>

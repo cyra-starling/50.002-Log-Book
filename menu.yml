@@ -9,9 +9,13 @@ language: en
   link: '#'
   weight: 1
   children:
-    - title: '30 Oct'
+    - title: 'Start of Log Book'
       link: '30oct.html'
       weight: 0
-    - title: '4 Nov'
+    - title: 'MOJO ALU'
       link: '4nov.html'
       weight: 1
+
+- title: 'Game Ideas'
+  link: 'gameIdeas.html'
+  weight: 2
