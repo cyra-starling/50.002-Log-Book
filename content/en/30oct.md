@@ -115,3 +115,5 @@ Third, boolean.
 Boolean uses a multiplexer where ALUFN signals as the input and A and B as the selector signals, as pictured below.  
 ![boolean](boolean.png)
 
+For example, for the boolean AND, the alufn from 0 to 3 would be 0 0 0 1.  
+When A is 1 and B is 1, it will choose the last option which is 1, and for other combinations where there will be at least 1 '0', the multiplexer will choose 0. This shows the multiplexer works as the logic gate AND.
