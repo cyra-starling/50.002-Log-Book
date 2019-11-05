@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>30 Oct - My Documentation</title>
+
+<meta name="description" content="Documentation built with SkyDocs."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="SkyDocs v0.7.4 Beta"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="30 Oct - My Documentation"/>
+<meta property="og:site_name" content="My Documentation"/>
+<meta property="og:url" content="https://skydocs.skyost.eu/en/30oct.html"/>
+<meta property="og:description" content="Documentation built with SkyDocs."/>
+<meta property="og:image" content="https://skydocs.skyost.eu/assets/img/icon.png"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="30 Oct - My Documentation"/>
+<meta name="twitter:site" content="My Documentation"/>
+<meta name="twitter:creator" content="@Skyost_"/>
+<meta name="twitter:url" content="https://skydocs.skyost.eu/en/30oct.html"/>
+<meta name="twitter:description" content="Documentation built with SkyDocs."/>
+<meta name="twitter:image" content="https://skydocs.skyost.eu/assets/img/icon.png"/>
+
+<meta name="theme-color" content="#2980b9"/>
+<link rel="icon" type="image/png" href="../assets/img/icon.png"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/page.css"/>
+</head>
+<body>
+<div id="content" class="row">
+<div id="navbar" class="col-md-4 col-lg-3">
+<header>
+<h1><span class="logo"></span><a href="../en/">My Documentation</a></h1>
+<form action="../search.html" method="get">
+<input name="keywords" type="text" class="form-control" placeholder="Search...">
+</form>
+</header>
+<div id="mobile-bar" class="d-md-none clearfix">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<div id="navigation" class="d-none d-md-block">
+<nav>
+<ul>
+<li>
+<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+</li>
+<li>
+<a href="#">Log Book Entries</a>
+<ul>
+<li>
+<a href="30oct.html">30 Oct</a>
+</li>
+<li>
+<a href="4nov.html">4 Nov</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<footer class="col-md-4 col-lg-3">
+Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
+</footer>
+</div>
+</div>
+<div id="article" class="col-md-8 col-lg-9">
+<article class="col-md-12 col-lg-9">
+<section id="article-header" class="clearfix">
+<ul class="links">
+<li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
+<li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
+</ul>
+<small class="date text-muted">Nov 5, 2019, 11:04:13 PM</small>
+</section>
+<section>
+<h1 id="30-oct-2019---the-day-i-realized-i-need-to-make-a-log-book">30 Oct 2019 - The day I realized I need to make a log book</h1>
+<blockquote>
+<p>A Good Friend of Mine:<br/>
+<em>&quot;Do you know we have a log book that we need to write and will be checked
+during the first check off?&quot;</em></p>
+</blockquote>
+<p><img src="https://media3.giphy.com/media/91fEJqgdsnu4E/giphy.gif" alt="what"/></p>
+<p>Ok yes I just remembered that recently so here is my first entry.</p>
+<hr/>
+<p>Here I'll be revising my labs and putting in some game ideas that I have
+thought of.</p>
+<h3 id="lab-1"><strong>Lab 1</strong></h3>
+<p>This lab mostly focused on trying to get familiarized with jsim syntax and the
+CMOS.</p>
+<p>Some important points to note:</p>
+<ul>
+<li>Always name the nodes first (prefferably on the circuit drawing) to avoid
+any confusion and it makes your life easier, so why not?</li>
+<li>'0' is always 0 / GND</li>
+<li>Zoom in when in waveform window to get more accurate measurement</li>
+</ul>
+<p>One of the syntax for jsim:</p>
+<pre><code>M[name] d g s b [type] w l
+</code></pre>
+<p>M is mosfet, <code>[name]</code> is equivalent to variable name, d g s b is respectively
+drain, gate, source, and bulk, <code>[type]</code> is either PFET or NFET, and w and l are
+width and length.</p>
+<p><img src="https://slideplayer.com/slide/10633305/36/images/4/Schematic+diagram+of+the+structure+of+an+n-channel+silicon-based+MOSFET.jpg" alt="mosfet length and width"/></p>
+<p>The last part of lab 1 which is to esign a logic gate given a truth table</p>
+<table>
+<thead>
+<tr><th align="center">A</th><th align="center">B</th><th align="center">C</th><th align="center">F</th></tr>
+</thead>
+<tbody>
+<tr><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">0</td></tr>
+<tr><td align="center">1</td><td align="center">0</td><td align="center">0</td><td align="center">0</td></tr>
+<tr><td align="center">0</td><td align="center">1</td><td align="center">0</td><td align="center">0</td></tr>
+<tr><td align="center">0</td><td align="center">0</td><td align="center">1</td><td align="center">1</td></tr>
+<tr><td align="center">0</td><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr>
+<tr><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">1</td></tr>
+<tr><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">1</td></tr>
+<tr><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr>
+</tbody>
+</table>
+<p>From the truth table above, the sum of product will be:</p>
+<pre><code>F = A.B.C + A.~B.C + ~A.B.C
+</code></pre>
+<p>Simplified,</p>
+<pre><code>F = A.C + ~A.B.C  
+F = C.(A+B)
+</code></pre>
+<p>The circuit drawn from the sum of product is:<br/>
+<img src="cmos.jpg" alt="circuit"/></p>
+<h3 id="lab-2"><strong>Lab 2</strong></h3>
+<p>In this lab we made the full adder 4 bit. We created it with ripple carry
+architecture, which is cascading the full adders.</p>
+<p><img src="https://www.gatevidyalay.com/wp-content/uploads/2018/06/4-bit-Ripple-Carry-Adder.png" alt="ripple carry"/></p>
+<p>Each of the full adder consisted of 2 XOR gate and 1 3-input NAND gate and 3 2-input NAND gate.</p>
+<p>The formula for the full adder: (^ is XOR)</p>
+<pre><code>S = A ^ B ^ C
+Cout = A.B + A.C + B.C
+</code></pre>
+<p>The testing of this full adder is with 3 clock with different period. The goal
+is to achieve all combinations of inputs, so we used 3 clock of period 10ns,
+20ns, and 40ns.</p>
+<h3 id="lab-3"><strong>Lab 3</strong></h3>
+<p>ALU!! This week's topic is very interesting. It was something new and I was
+able to se different parts working together to be a &quot;unit&quot;.</p>
+<p>The ALU that we have to make consisted of 4 different parts. Adder, shifter,
+boolean, and compare.</p>
+<p>First, adder.
+The adder is using the same architecture as last week's, which was ripple
+carry. The difference is that last week's was 4 bit, and this adder is 32 bit.
+It is also controlled by a control signal, ALUFN bit 0.<br/>
+Below is a picture of the adder.
+<img src="https://computationstructures.org/exercises/alu/15.png" alt="adder 32 bit"/>
+The 32 bits of B will be &quot;XOR-ed&quot; with the ALUFN (or AFN in the picture). This acts as the 2's complement when the ALUFN is 1 which indicates subtraction ( A - B = A + (-B) ).<br/>
+Z is the NOR of all bits of S, which will be true if all bits are 0.<br/>
+V is to detect overflow, which is when the sign of the result is opposite of the inputs. This only applies for addition and not subtraction.</p>
+<p>Second, compare.
+Compare uses Z, V, and N from the adder. By doing A-B, the result of Z, V, and N can be used to compare A to B.<br/>
+For A == B, <code>F = Z</code> as Z indicates all bits are 0.<br/>
+For A &lt; B, <code>F = N ^ V</code> as A - B will result in negative if A is less than B, but negative could mean overflow too so we have to make sure it's not by &quot;XOR-ing&quot; N and V.<br/>
+For A &lt;= B, <code>F = Z + (N ^ V)</code> which is the OR of less than and equal.</p>
+<p>Third, boolean.<br/>
+Boolean uses a multiplexer</p>
+</section>
+<section id="pagination" class="clearfix">
+<a href="index.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
+<a href="/en/4nov.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+</section>
+</article>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script src="../assets/js/page.js"></script>
+</body>
+</html>

@@ -1,2 +1,2 @@
 java -jar skydocs.jar build
-xcopy build docs /i /y
+xcopy build docs /i /y /e
