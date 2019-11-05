@@ -112,4 +112,6 @@ For A < B, ```F = N ^ V``` as A - B will result in negative if A is less than B,
 For A <= B, ```F = Z + (N ^ V)``` which is the OR of less than and equal.
 
 Third, boolean.  
-Boolean uses a multiplexer
+Boolean uses a multiplexer where ALUFN signals as the input and A and B as the selector signals, as pictured below.  
+![boolean](boolean.png)
+
