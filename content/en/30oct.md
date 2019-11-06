@@ -2,6 +2,7 @@
 title: "30 Oct"
 language: "en"
 previous: "index.html"
+next: "4nov.html"
 ---
 ## 30 Oct 2019 - 2 Nov 2019
 # The day I realized I need to make a log book

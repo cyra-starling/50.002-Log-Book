@@ -1,12 +1,12 @@
 ---
 title: "Home"
 language: "en"
-next: "page.html"
+previous: "index.html"
+next: "30oct.html"
 ---
 
 # Welcome!
-Hi! I'm Amanda and this is my log-book-turned-to-a-website for 50.002!  
-You can go to my entries from the buttons on the left side! Enjoy?
+Hi! I'm Amanda and this is my log-book-turned-to-a-website for 50.002! You can go to my entries from the buttons on the left side! Enjoy?
 
 
 Here is a pic of a cute cat :)  

@@ -2,6 +2,7 @@
 title: "4 Nov"
 language: "en"
 previous: "30oct.html"
+next: "checkoff1.html"
 ---
 ## 4 Nov 2019 - 6 Nov 2019
 # The day we combined our ALU in MOJO!

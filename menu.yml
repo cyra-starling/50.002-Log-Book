@@ -15,6 +15,9 @@ language: en
     - title: 'MOJO ALU'
       link: '4nov.html'
       weight: 1
+    - title: 'Checkoff 1'
+      link: 'checkoff1.html'
+      weight: 2
 
 - title: 'Game Ideas'
   link: 'gameIdeas.html'

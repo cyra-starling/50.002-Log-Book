@@ -1,7 +1,8 @@
 ---
 title: "Game Ideas"
 language: "en"
-previous: "4nov.html"
+previous: "index.html"
+next: "index.html"
 ---
 
 # Compilation of Game Ideas for 1D Project
