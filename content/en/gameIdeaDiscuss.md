@@ -41,7 +41,8 @@ Both player will be racing to "capture the flag"!
 '-' is empty spot, A is player 1's position, B is player 2's position. Everytime a player manage to get the number, they will advance by 1 step.
 
 
-If A manage to complete 1 problem:
+If player 1 manage to complete 1 problem:
+
 |<center>-</center>|<center>A</center>|<center>-</center>|<center>-</center>|<center>-</center>|<center>flag</center>|<center>-</center>|<center>-</center>|<center>-</center>|<center>-</center>|<center>B</center>|
 |-|-|-|-|-|----|-|-|-|-|-|
 
