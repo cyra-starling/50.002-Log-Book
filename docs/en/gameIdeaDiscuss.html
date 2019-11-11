@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Designing Our Game - Log Book</title>
+
+<meta name="description" content="Documentation built with SkyDocs."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="SkyDocs v0.7.4 Beta"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Designing Our Game - Log Book"/>
+<meta property="og:site_name" content="Log Book"/>
+<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/gameIdeaDiscuss.html"/>
+<meta property="og:description" content="Documentation built with SkyDocs."/>
+<meta property="og:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Designing Our Game - Log Book"/>
+<meta name="twitter:site" content="Log Book"/>
+<meta name="twitter:creator" content="@Skyost_"/>
+<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/gameIdeaDiscuss.html"/>
+<meta name="twitter:description" content="Documentation built with SkyDocs."/>
+<meta name="twitter:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
+
+<meta name="theme-color" content="#2980b9"/>
+<link rel="icon" type="image/png" href="../assets/img/icon.png"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/page.css"/>
+</head>
+<body>
+<div id="content" class="row">
+<div id="navbar" class="col-md-4 col-lg-3">
+<header>
+<h1><span class="logo"></span><a href="../en/">Log Book</a></h1>
+<form action="../search.html" method="get">
+<input name="keywords" type="text" class="form-control" placeholder="Search...">
+</form>
+</header>
+<div id="mobile-bar" class="d-md-none clearfix">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<div id="navigation" class="d-none d-md-block">
+<nav>
+<ul>
+<li>
+<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+</li>
+<li>
+<a href="#">Log Book Entries</a>
+<ul>
+<li>
+<a href="30oct.html">Start of Log Book</a>
+</li>
+<li>
+<a href="4nov.html">MOJO ALU</a>
+</li>
+<li>
+<a href="checkoff1.html">Checkoff 1</a>
+</li>
+<li>
+<a href="gameIdeaDiscuss.html">Game Concept Discussion</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="gameIdeas.html">Game Ideas</a>
+</li>
+</ul>
+</nav>
+<footer class="col-md-4 col-lg-3">
+Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
+</footer>
+</div>
+</div>
+<div id="article" class="col-md-8 col-lg-9">
+<article class="col-md-12 col-lg-9">
+<section id="article-header" class="clearfix">
+<ul class="links">
+<li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
+<li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
+</ul>
+<small class="date text-muted">Nov 11, 2019, 8:44:39 PM</small>
+</section>
+<section>
+<center><h1>Designing Our Game!</h1></center>
+<center>
+<img src="https://i.imgur.com/n8pJSnE.gif">
+</center>
+<p>We had a meeting on 11/11 to discuss and finalize what game we are going to make for our 1D project. We had each come up with some ideas before meeting, and here are some of our ideas and reasons why we accepted/rejected it.</p>
+<hr/>
+<h2 id="snake-game">Snake Game</h2>
+<p><img src="https://media0.giphy.com/media/4JmTg4bTuofUQ/source.gif" alt="snake"/><br/>
+We had decided that snake game would be slightly complicated to implement, as a normal 1 player snake game would require us to increase the length of the snake everytime it eats something, and we have limited number of pins on MOJO to connect to the LED.</p>
+<hr/>
+<h2 id="typing-game">Typing Game</h2>
+<p><img src="https://www.freegameplanet.com/wp-content/uploads/2016/10/Z-type-game.gif" alt="typing game"/><br/>
+We had considered this to be our game. So there would be a word/sentence shown and the player would have to type it in correctly to get points. As a normal keyboard (with 26 alphabets) might be too much pins to connect to MOJO, we thought of reducing it by using symbols. But, the problem of displaying the word comes to our mind as we are not sure on how to do it, so we had decided not to make this type of game.</p>
+<hr/>
+<h2 id="unnamed-math-game">Unnamed Math Game</h2>
+<p>We had thought of several games that uses math as its main mechanic. We decided on doing a math number manipulation(?) kind of thing. So there will be a number shown for both player, and each player will have 3 button (+2, -1, *5). The player will have to use those 3 buttons to manipulate a starting number they have to the one shown for both player.</p>
+<p>We have several version we have thought of:</p>
+<ol>
+<li>
+<p>The current &quot;number&quot; that the player is at will not be shown, but the player will be given an extra button to &quot;reset&quot; their number to 0 in case they forgot their number and an LED to indicate that they had successfully clear their number (checks if the number is equal to 0).</p>
+</li>
+<li>
+<p>The player will be shown their current number, but they will not be given the &quot;reset&quot; button.</p>
+</li>
+<li>
+<p>Provide both mode, the first one would be for &quot;hard mode&quot; and the second one would be the normal mode.</p>
+</li>
+</ol>
+<p>Both player will be racing to &quot;capture the flag&quot;!</p>
+<table>
+<thead>
+<tr><th><center>A</center></th><th><center>-</center></th><th><center>-</center></th><th><center>-</center></th><th><center>-</center></th><th><center>flag</center></th><th><center>-</center></th><th><center>-</center></th><th><center>-</center></th><th><center>-</center></th><th><center>B</center></th></tr>
+</thead>
+<tbody></tbody>
+</table>
+<p>'-' is empty spot, A is player 1's position, B is player 2's position. Everytime a player manage to get the number, they will advance by 1 step.</p>
+<p>If A manage to complete 1 problem:
+|<center>-</center>|<center>A</center>|<center>-</center>|<center>-</center>|<center>-</center>|<center>flag</center>|<center>-</center>|<center>-</center>|<center>-</center>|<center>-</center>|<center>B</center>|
+|-|-|-|-|-|----|-|-|-|-|-|</p>
+<p>Until the one player reach the flag, they will keep playing. There will be 3 &quot;lanes&quot;, after the first lane's flag is captured then it will automatically move to the next lane. Each time a player captured a flag, their score will be incremented by 1.<br/>
+(All of this will be in the form of LED &quot;panels&quot;, an LED behind an acrylic &quot;square&quot; panel)</p>
+<p>Our <em>scibble</em>:<br/>
+<img src="scribble.jpg" alt="scribblee"/></p>
+<p>Our <em>approximate shopping list</em>:</p>
+<ul>
+<li>&quot;Transluscent&quot; acrylic sheet (A3)</li>
+<li>Wood 3mm and 6mm</li>
+<li>Bunch of wires</li>
+<li>PCB (only if needed)</li>
+<li>40 LED</li>
+<li>6 7-segments</li>
+<li>10 buttons</li>
+<li>1 switch</li>
+</ul>
+<p>The comments and advices we wil get from the checkoff will be updated here on Wednesday.</p>
+</section>
+<section id="pagination" class="clearfix">
+<a href="checkoff1.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
+<a href="index.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+</section>
+</article>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script src="../assets/js/page.js"></script>
+</body>
+</html>

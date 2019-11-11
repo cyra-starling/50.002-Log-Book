@@ -2,7 +2,7 @@
 title: "Checkoff 1"
 language: "en"
 previous: "4nov.html"
-next: "index.html"
+next: "gameIdeaDiscuss.html"
 ---
 
 <center><h1>Checkoff time!</h1></center>

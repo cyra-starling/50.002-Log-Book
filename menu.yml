@@ -18,6 +18,9 @@ language: en
     - title: 'Checkoff 1'
       link: 'checkoff1.html'
       weight: 2
+    - title: 'Game Concept Discussion'
+      link: 'gameIdeaDiscuss.html'
+      weight: 3
 
 - title: 'Game Ideas'
   link: 'gameIdeas.html'
