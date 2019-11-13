@@ -52,6 +52,9 @@ Until the one player reach the flag, they will keep playing. There will be 3 "la
 Our _scibble_:  
 ![scribblee](scribble.jpg)
 
+Our _Data Path_:
+![data path](dataPath.jpg)
+
 Our _approximate shopping list_:
 - "Transluscent" acrylic sheet (A3)
 - Wood 3mm and 6mm
