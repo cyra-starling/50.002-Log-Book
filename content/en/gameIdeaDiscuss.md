@@ -24,7 +24,7 @@ We had considered this to be our game. So there would be a word/sentence shown a
 
 ---
 ## Unnamed Math Game
-We had thought of several games that uses math as its main mechanic. We decided on doing a math number manipulation(?) kind of thing. So there will be a number shown for both player, and each player will have 3 button (+2, -1, *5). The player will have to use those 3 buttons to manipulate a starting number they have to the one shown for both player.
+We had thought of several games that uses math as its main mechanic. We decided on doing a math number manipulation(?) kind of thing. So there will be a number shown for both player, and each player will have 3 button (+2, -1, *5). The player will have to use those 3 buttons to manipulate a starting number they have to the one shown for both player. (The numbers on the button is still not fixed yet)
 
 We have several version we have thought of:  
 1. The current "number" that the player is at will not be shown, but the player will be given an extra button to "reset" their number to 0 in case they forgot their number and an LED to indicate that they had successfully clear their number (checks if the number is equal to 0).
@@ -62,7 +62,19 @@ Our _approximate shopping list_:
 - PCB (only if needed)
 - 40 LED
 - 6 7-segments
-- 10 buttons
+- 10 buttons (arcade like buttons)
 - 1 switch
 
-The comments and advices we wil get from the checkoff will be updated here on Wednesday.
+### Checkoff - Suggestions and Comments
+We did the checkoff on Wednesday and the comments and suggestions are down below.
+
+- The way the button is currently is might result in a dynamic where the player not using all 3 buttons. Ideally the gameplay should make it so that the player requires/encouraged to use all buttons
+- Take into accound the difficulty to learn the game when designing it
+- For 'hard mode' that we had thought of (version 1 above), we could give some hints to make it not impossible/too hard. The hint could be some LEDs that shows when it's even/odd
+- Elaborate more on the state transition diagram, the data path, and the components of register file
+- Add a Write Enable (WE) signal for register file
+- Possible modifications - add timer for each question and make it faster every time they manage to solve a question
+- Deide on how to choose/generate the questions (randomized? fixed?)
+
+Now, onto working on improving the design and then on the game!
+<center><img src='https://i.pinimg.com/originals/9e/91/fe/9e91feda4e8cf0c5ddad28ee53c07f50.gif'></center>
