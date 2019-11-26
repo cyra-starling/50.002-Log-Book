@@ -82,7 +82,7 @@ Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
 <li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
 <li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
 </ul>
-<small class="date text-muted">Nov 13, 2019, 3:55:10 PM</small>
+<small class="date text-muted">Nov 25, 2019, 5:18:41 PM</small>
 </section>
 <section>
 <center><h1>Designing Our Game!</h1></center>
@@ -100,7 +100,7 @@ We had decided that snake game would be slightly complicated to implement, as a 
 We had considered this to be our game. So there would be a word/sentence shown and the player would have to type it in correctly to get points. As a normal keyboard (with 26 alphabets) might be too much pins to connect to MOJO, we thought of reducing it by using symbols. But, the problem of displaying the word comes to our mind as we are not sure on how to do it, so we had decided not to make this type of game.</p>
 <hr/>
 <h2 id="unnamed-math-game">Unnamed Math Game</h2>
-<p>We had thought of several games that uses math as its main mechanic. We decided on doing a math number manipulation(?) kind of thing. So there will be a number shown for both player, and each player will have 3 button (+2, -1, *5). The player will have to use those 3 buttons to manipulate a starting number they have to the one shown for both player.</p>
+<p>We had thought of several games that uses math as its main mechanic. We decided on doing a math number manipulation(?) kind of thing. So there will be a number shown for both player, and each player will have 3 button (+2, -1, *5). The player will have to use those 3 buttons to manipulate a starting number they have to the one shown for both player. (The numbers on the button is still not fixed yet)</p>
 <p>We have several version we have thought of:</p>
 <ol>
 <li>
@@ -133,7 +133,11 @@ We had considered this to be our game. So there would be a word/sentence shown a
 <p>Our <em>scibble</em>:<br/>
 <img src="scribble.jpg" alt="scribblee"/></p>
 <p>Our <em>Data Path</em>:
-<img src="dataPath.jpg" alt="data path"/></p>
+<img src="dataPath.png" alt="data path"/></p>
+<p>Some explanation on data path:</p>
+<ul>
+<li>ASEL is used to choose which register goes to output for A in ALU</li>
+</ul>
 <p>Our <em>approximate shopping list</em>:</p>
 <ul>
 <li>&quot;Transluscent&quot; acrylic sheet (A3)</li>
@@ -142,10 +146,22 @@ We had considered this to be our game. So there would be a word/sentence shown a
 <li>PCB (only if needed)</li>
 <li>40 LED</li>
 <li>6 7-segments</li>
-<li>10 buttons</li>
+<li>10 buttons (arcade like buttons)</li>
 <li>1 switch</li>
 </ul>
-<p>The comments and advices we wil get from the checkoff will be updated here on Wednesday.</p>
+<h3 id="checkoff---suggestions-and-comments">Checkoff - Suggestions and Comments</h3>
+<p>We did the checkoff on Wednesday and the comments and suggestions are down below.</p>
+<ul>
+<li>The way the button is currently is might result in a dynamic where the player not using all 3 buttons. Ideally the gameplay should make it so that the player requires/encouraged to use all buttons</li>
+<li>Take into accound the difficulty to learn the game when designing it</li>
+<li>For 'hard mode' that we had thought of (version 1 above), we could give some hints to make it not impossible/too hard. The hint could be some LEDs that shows when it's even/odd</li>
+<li>Elaborate more on the state transition diagram, the data path, and the components of register file</li>
+<li>Add a Write Enable (WE) signal for register file</li>
+<li>Possible modifications - add timer for each question and make it faster every time they manage to solve a question</li>
+<li>Deide on how to choose/generate the questions (randomized? fixed?)</li>
+</ul>
+<p>Now, onto working on improving the design and then on the game!</p>
+<center><img src='https://i.pinimg.com/originals/9e/91/fe/9e91feda4e8cf0c5ddad28ee53c07f50.gif'></center>
 </section>
 <section id="pagination" class="clearfix">
 <a href="checkoff1.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>

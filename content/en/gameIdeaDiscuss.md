@@ -53,7 +53,11 @@ Our _scibble_:
 ![scribblee](scribble.jpg)
 
 Our _Data Path_:
-![data path](dataPath.jpg)
+![data path](dataPath.png)
+
+Some explanation on data path:
+- ASEL is used to choose which register goes to output for A in ALU
+
 
 Our _approximate shopping list_:
 - "Transluscent" acrylic sheet (A3)
