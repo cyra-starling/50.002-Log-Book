@@ -20,10 +20,10 @@ language: en
       weight: 2
     - title: 'Game Concept Discussion'
       link: 'gameIdeaDiscuss.html'
-      weight: 
+      weight: 3
     - title: 'Data Path Design'
-    link: 'dataPath.html'
-    weight: 4
+      link: 'dataPath.html'
+      weight: 4
 
 - title: 'Game Ideas'
   link: 'gameIdeas.html'
