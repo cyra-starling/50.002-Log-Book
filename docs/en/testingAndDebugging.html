@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Testing and Debugging our Game - Log Book</title>
+
+<meta name="description" content="Documentation built with SkyDocs."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="SkyDocs v0.7.4 Beta"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Testing and Debugging our Game - Log Book"/>
+<meta property="og:site_name" content="Log Book"/>
+<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/testingAndDebugging.html"/>
+<meta property="og:description" content="Documentation built with SkyDocs."/>
+<meta property="og:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Testing and Debugging our Game - Log Book"/>
+<meta name="twitter:site" content="Log Book"/>
+<meta name="twitter:creator" content="@Skyost_"/>
+<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/testingAndDebugging.html"/>
+<meta name="twitter:description" content="Documentation built with SkyDocs."/>
+<meta name="twitter:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
+
+<meta name="theme-color" content="#2980b9"/>
+<link rel="icon" type="image/png" href="../assets/img/icon.png"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/page.css"/>
+</head>
+<body>
+<div id="content" class="row">
+<div id="navbar" class="col-md-4 col-lg-3">
+<header>
+<h1><span class="logo"></span><a href="../en/">Log Book</a></h1>
+<form action="../search.html" method="get">
+<input name="keywords" type="text" class="form-control" placeholder="Search...">
+</form>
+</header>
+<div id="mobile-bar" class="d-md-none clearfix">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<div id="navigation" class="d-none d-md-block">
+<nav>
+<ul>
+<li>
+<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+</li>
+<li>
+<a href="#">Log Book Entries</a>
+<ul>
+<li>
+<a href="30oct.html">Start of Log Book</a>
+</li>
+<li>
+<a href="4nov.html">MOJO ALU</a>
+</li>
+<li>
+<a href="checkoff1.html">Checkoff 1</a>
+</li>
+<li>
+<a href="gameIdeaDiscuss.html">Game Concept Discussion</a>
+</li>
+<li>
+<a href="dataPath.html">Data Path Design</a>
+</li>
+<li>
+<a href="testingAndDebugging.html">Testing and Debugging</a>
+</li>
+<li>
+<a href="index.html">Hardware Preparation</a>
+</li>
+<li>
+<a href="index.html">Exhibition!</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="gameIdeas.html">Game Ideas</a>
+</li>
+</ul>
+</nav>
+<footer class="col-md-4 col-lg-3">
+Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
+</footer>
+</div>
+</div>
+<div id="article" class="col-md-8 col-lg-9">
+<article class="col-md-12 col-lg-9">
+<section id="article-header" class="clearfix">
+<ul class="links">
+<li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
+<li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
+</ul>
+<small class="date text-muted">Dec 11, 2019, 10:27:32 PM</small>
+</section>
+<section>
+<center><h1>Testing and Debugging our Game!</h1></center>
+<p>Now that we have finished our data path and our FSM, it's time to test it out and make sure that our FSM is working properly, which is very important to find out as we have 2 FSM and we might encounter synchronizing issue (will explain more later). So....</p>
+<center>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtBFfrvBikl4Uz4s5nvL2RF3a4OiqLgAAziP0HXuaGYwE-fj0B&s">
+</center>
+<hr/>
+<h2 id="testing-button-inputs">Testing Button Inputs</h2>
+<p>To start the testing, first we tested the button inputs for +, -, and x by connecting a button and a pair of seven segment to show the player's current number as +, -, and x will change them.</p>
+<p>We realized that one press of the button registers as multiple button presses, so we decided to add in button conditioner and edge detector for each button to reduce it as much as we can even though there will still be some occasion where it registers multiple times.</p>
+<p>Inside <code>.clk(clk) {...}</code> :</p>
+<pre><code>edge_detector edgeAdd1 (#RISE(1), #FALL(0));
+button_conditioner condAdd1;
+</code></pre>
+<p>Inside <code>always {...}</code> :</p>
+<pre><code>condAdd1.in = add1;
+edgeAdd1.in = condAdd1.out;
+</code></pre>
+<hr/>
+<h2 id="testing-shifting-character">Testing Shifting 'Character'</h2>
+<p>Now that we know the buttons are working properly, we decided to test out whether the 'character' in each lane will shift properly or not. We tested with 1 lane first.</p>
+<p>We tested and it was correct, we tested getting another problem correct after the flag in one lane is captured to see which lane will be updated or not. The correct one would be the next lane that is shifted (as the previous one's flag is already captured)</p>
+<center>
+Everything was working and everything was correct!
+</center>
+<center>
+<img src="https://media.tenor.com/images/012b7efc748fea5a3a8987df5b13b671/tenor.gif">
+</center>
+<hr/>
+<h2 id="testing-multiplayer-mode">Testing Multiplayer Mode</h2>
+<p>After everything is proven to be working correctly, we want to test out the dynamic of having 2 player play this game. We built the controllers for the buttons and seven segments, and used some leds on breadboard to show the lanes. Two of us played (competitively of course), and it was fun for us! We had noticed a few bug that we immediately try to fix.
+|Bugs|Solution|
+|-|-|
+|After the game ended, if we start the game again, the lane that will be &quot;shifted&quot; is the 3rd lane which is the last lane|We realized we had forgotten to &quot;reset&quot; the value in the register that saves the &quot;current lane&quot;, so we had that fixed|
+|The character's position in each lane was not reset properly (the &quot;characters&quot; does not go back to position one)|We had forgotten to implement this too, so we added it in &gt;.&lt;|</p>
+<hr/>
+<p>And now that we are sure everything works, here comes hardware.</p>
+<center><img src="https://media.giphy.com/media/KdB8MsRiiUXUA/giphy.gif"></center>
+</section>
+<section id="pagination" class="clearfix">
+<a href="dataPath.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
+<a href="hardwarePreparation.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+</section>
+</article>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script src="../assets/js/page.js"></script>
+</body>
+</html>

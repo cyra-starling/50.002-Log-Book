@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Designing Data Path and FSM - Log Book</title>
+<title>Hardware Preparation - Log Book</title>
 
 <meta name="description" content="Documentation built with SkyDocs."/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="generator" content="SkyDocs v0.7.4 Beta"/>
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Designing Data Path and FSM - Log Book"/>
+<meta property="og:title" content="Hardware Preparation - Log Book"/>
 <meta property="og:site_name" content="Log Book"/>
-<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/dataPath.html"/>
+<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/hardwarePreparation.html"/>
 <meta property="og:description" content="Documentation built with SkyDocs."/>
 <meta property="og:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Designing Data Path and FSM - Log Book"/>
+<meta name="twitter:title" content="Hardware Preparation - Log Book"/>
 <meta name="twitter:site" content="Log Book"/>
 <meta name="twitter:creator" content="@Skyost_"/>
-<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/dataPath.html"/>
+<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/hardwarePreparation.html"/>
 <meta name="twitter:description" content="Documentation built with SkyDocs."/>
 <meta name="twitter:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
@@ -94,24 +94,12 @@ Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
 <li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
 <li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
 </ul>
-<small class="date text-muted">Nov 26, 2019, 5:26:57 PM</small>
+<small class="date text-muted">Dec 12, 2019, 10:08:46 PM</small>
 </section>
 <section>
-<h1 id="data-path-design">Data Path Design</h1>
-<p>I was tasked to make the data path, and we have gone through several versions of it.</p>
-<p>First version:<br/>
-<img src="dataPath1.png" alt="first data path"/></p>
-<p>We decide that this was to complicated so we decided to reduce the amount of connections for the register and make it so that the FSM will be the one sending out the control signals for the muxes instead of the button input module. We also decided to remove the button input modules and make it so that the button inputs will go to FSM straight away to make it faster (less &quot;path&quot; traveled).</p>
-<p>Second version:
-<img src="dataPath2.png" alt="second data path"/></p>
-<p>We made it so that the registers now has 2 inputs and 3 outputs, with ASEL signal to choose which register to go to A of ALU, WA to choose which register. FSM will also give BSEL to the mux that chooses whether it will be from FSM(constant numbers) or from register(goal number).</p>
-<p>We have met with prof Oka and also discussed more on this, we decided to change where the constant numbers will be coming from, and also added RA (read address) to separate from WA (write address).</p>
-<p>We have changed it so that the constant numbers will just be connected immediately to the muxes and FSM will only give out signals.</p>
-<p>Third/Final version:
-<img src="dataPath3.png" alt="final data path"/></p>
 </section>
 <section id="pagination" class="clearfix">
-<a href="gameIdeaDiscuss.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
+<a href="testingAndDebugging.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
 <a href="index.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
 </section>
 </article>

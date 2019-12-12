@@ -24,6 +24,15 @@ language: en
     - title: 'Data Path Design'
       link: 'dataPath.html'
       weight: 4
+    - title: 'Testing and Debugging'
+      link: 'testingAndDebugging.html'
+      weight: 5
+    - title: 'Hardware Preparation'
+      link: 'index.html'
+      weight: 6
+    - title: 'Exhibition!'
+      link: 'index.html'
+      weight: 7
 
 - title: 'Game Ideas'
   link: 'gameIdeas.html'
