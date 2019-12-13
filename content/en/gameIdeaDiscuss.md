@@ -2,7 +2,7 @@
 title: "Designing Our Game"
 language: "en"
 previous: "checkoff1.html"
-next: "index.html"
+next: "dataPath.html"
 ---
 
 <center><h1>Designing Our Game!</h1></center>

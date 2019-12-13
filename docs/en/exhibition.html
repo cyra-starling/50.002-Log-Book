@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Designing Data Path and FSM - Log Book</title>
+<title>Exhibition - Log Book</title>
 
 <meta name="description" content="Documentation built with SkyDocs."/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="generator" content="SkyDocs v0.7.4 Beta"/>
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Designing Data Path and FSM - Log Book"/>
+<meta property="og:title" content="Exhibition - Log Book"/>
 <meta property="og:site_name" content="Log Book"/>
-<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/dataPath.html"/>
+<meta property="og:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/exhibition.html"/>
 <meta property="og:description" content="Documentation built with SkyDocs."/>
 <meta property="og:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Designing Data Path and FSM - Log Book"/>
+<meta name="twitter:title" content="Exhibition - Log Book"/>
 <meta name="twitter:site" content="Log Book"/>
 <meta name="twitter:creator" content="@Skyost_"/>
-<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/dataPath.html"/>
+<meta name="twitter:url" content="https://cyra-starling.github.io/Comstruct-Log-Book//en/exhibition.html"/>
 <meta name="twitter:description" content="Documentation built with SkyDocs."/>
 <meta name="twitter:image" content="https://cyra-starling.github.io/Comstruct-Log-Book//assets/img/icon.png"/>
 
@@ -97,25 +97,27 @@ Powered by <a href="https://skydocs.skyost.eu">SkyDocs</a> v0.7.4 Beta.
 <li><small><a href="https://github.com/Skyost/SkyDocs/fork" class="text-muted">Fork it on Github</a></small></li>
 <li><small><a href="https://github.com/Skyost/SkyDocs" class="text-muted">Star it on Github</a></small></li>
 </ul>
-<small class="date text-muted">Dec 13, 2019, 10:49:48 PM</small>
+<small class="date text-muted">Dec 13, 2019, 10:13:44 PM</small>
 </section>
 <section>
-<h1 id="data-path-design">Data Path Design</h1>
-<p>I was tasked to make the data path, and we have gone through several versions of it.</p>
-<p>First version:<br/>
-<img src="dataPath1.png" alt="first data path"/></p>
-<p>We decide that this was to complicated so we decided to reduce the amount of connections for the register and make it so that the FSM will be the one sending out the control signals for the muxes instead of the button input module. We also decided to remove the button input modules and make it so that the button inputs will go to FSM straight away to make it faster (less &quot;path&quot; traveled).</p>
-<p>Second version:
-<img src="dataPath2.png" alt="second data path"/></p>
-<p>We made it so that the registers now has 2 inputs and 3 outputs, with ASEL signal to choose which register to go to A of ALU, WA to choose which register. FSM will also give BSEL to the mux that chooses whether it will be from FSM(constant numbers) or from register(goal number).</p>
-<p>We have met with prof Oka and also discussed more on this, we decided to change where the constant numbers will be coming from, and also added RA (read address) to separate from WA (write address).</p>
-<p>We have changed it so that the constant numbers will just be connected immediately to the muxes and FSM will only give out signals.</p>
-<p>Third/Final version:
-<img src="dataPath3.png" alt="final data path"/></p>
+<h1 id="exhibition-time">Exhibition Time!</h1>
+<p><img src="https://media2.giphy.com/media/l0HlABoHi6CUM1j56/giphy.gif" alt="exhibition"/></p>
+<hr/>
+<h2 id="our-setup">Our setup:</h2>
+<p><img src="wholeSetup.jpg" alt="setup"/></p>
+<p>I helped with setting it up at the booth before 10am, and my friend Matthew had to try and program the MOJO again as previously we had problems trying to program the MOJO.</p>
+<p>After set up is finished, I went to my 50.001 booth and attended to it. A few times during the exhibition my friend tell me some updates, some of them are:</p>
+<ul>
+<li>People are having fun playing the game!!</li>
+<li>OUR GAME GOT CHOSEN TO BE TAKEN TO DSL! This was the happiest news I could get when attending my 50.001 booth!</li>
+</ul>
+<p><img src="https://media1.tenor.com/images/9ef968d2a89aa3f468b8220d34a68522/tenor.gif?itemid=12962917" alt="happy capoo"/></p>
+<p>But yes, I only have this much for this log as for the whole day I was attending 50.001 booth.
+<img src="https://media1.giphy.com/media/uWzRXTQRoQzxDO9W0p/source.gif" alt="sad capoo"/></p>
 </section>
 <section id="pagination" class="clearfix">
-<a href="gameIdeaDiscuss.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
-<a href="testingAndDebugging.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+<a href="hardwarePreparation.html" class="text-muted previous"><i class="fa fa-caret-left" aria-hidden="true"></i> <span>Previous</span></a>
+<a href="reflection.html" class="text-muted next"><span>Next</span> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
 </section>
 </article>
 </div>

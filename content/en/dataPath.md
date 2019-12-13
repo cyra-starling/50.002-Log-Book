@@ -2,7 +2,7 @@
 title: "Designing Data Path and FSM"
 language: "en"
 previous: "gameIdeaDiscuss.html"
-next: "index.html"
+next: "testingAndDebugging.html"
 ---
 # Data Path Design
 

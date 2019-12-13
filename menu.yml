@@ -28,10 +28,13 @@ language: en
       link: 'testingAndDebugging.html'
       weight: 5
     - title: 'Hardware Preparation'
-      link: 'index.html'
+      link: 'hardwarePreparation.html'
       weight: 6
     - title: 'Exhibition!'
-      link: 'index.html'
+      link: 'exhibition.html'
+      weight: 7
+    - title: 'Reflection'
+      link: 'reflection.html'
       weight: 7
 
 - title: 'Game Ideas'
